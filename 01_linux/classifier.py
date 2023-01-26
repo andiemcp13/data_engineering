@@ -6,7 +6,14 @@ model.load_from_file()
 
 
 def process_stdin(stream):
-    < PUT YOUR CODE HERE>
+    fname = []
+
+    for line in stream:
+        print(line)
+        f = line.rstrip()
+        fname.append(f)
+
+    return fname
 
 def score_one_file(fname, model):
     try:
